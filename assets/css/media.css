@@ -1,0 +1,7 @@
+/*634*/
+@media (max-width:634px){
+    .summary .content{
+        flex-direction: column;
+        align-items: center;
+    }
+}

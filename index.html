@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+      <!-- font aswome 6.4-->
+      <link rel="stylesheet" href="assets/all.min.css" />
+    <!-- add css style -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- add css media query-->
+    <link rel="stylesheet" href="assets/css/media.css" />
+  </head>
+  <body>
+    <!-- Loader -->
+     <div class="loading">
+        <span class="loader"></span>
+        <h1>TODO List</h1>
+        <p>Rahaf Hussein</p>
+
+     </div>
+    <!--Modal for confirm delete task-->
+    <div class="modal" id="modal">
+        
+        <div class="content">
+            <div class="closeModal">
+                <i class="fa-solid fa-x closeIcone" onclick="HideModal()"></i>
+
+            </div>
+            <img src="./assets/image/200w.gif" alt="thinking image">
+            <p>Are you sure you want to delete this task? This action cannot be undone.
+
+            </p>
+            <div class="buttons">
+                <button class="DeleteButton" onclick="confirmRemoveTask()">delete</button>
+                <button class="DoneButton" onclick="HideModal()"> No,wait</button>
+            </div>
+        </div>
+    </div> 
+    <div class="modal" id="modalEdit">
+        
+        <div class="content">
+            <div class="closeModal">
+                <i class="fa-solid fa-x closeIcone" onclick="HideModalEdit()"></i>
+
+            </div>
+            <img src="./assets/image/edit.gif" alt="thinking image" >
+            <p>Edit task description</p>
+           <form action="submit" id="editForm">
+            <input type="hidden" id="hiddenEditInput" name="hiddenData" >
+
+            <input type="text" id="inputEdit" name="todo">
+            <p id="validateEdit"></p>
+            <div class="buttons">
+                <button class="DoneButton" id="editButt"> Edit Task</button>
+            </div>
+           </form>
+        </div>
+    </div>
+    <div class="container" >
+     
+      <h1>TODO List</h1>
+      <!--  button and input to add new task-->
+      <form class="addList" id="taskForm">
+        <input type="text" placeholder="Add New Task" id="newTask" />
+        <button type="submit"><i class="fa-solid fa-plus"></i> Add </button>
+      </form>
+      <p id="taskValidate"></p>
+
+      <!-- input to search in tasks-->
+      <div class="searchList">
+        <input type="text" placeholder="Search Tasks" id="search" />
+      </div>
+      <div class="summary">
+       
+        <div class="content">
+            <p id="totalTasks"></p>
+        <p id="completedTasks">Completed Items : </p>
+        <p id="RemainingTasks">Remaining Items
+            : </p>
+        </div>
+
+    </div>
+      <!-- table contain tasks -->
+      <table class="tableTasks">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">TODO Description</th>
+            <th scope="col">User ID</th>
+            <th scope="col">Status</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <footer>
+        <p>&copy; RAHAF HUSSEIN - 2024</p>
+
+      </footer>
+    
+    </div>
+    <!-- add Java Script-->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
