@@ -88,7 +88,7 @@ const response = await fetch("https://dummyjson.com/todos/add", {
   });
 Tasks.push(newTask);
 
-if (response.ok=true){
+if (response.ok==true){
     validate.innerHTML="task added successfully ✅";
     validate.style.color="green";
     newTaskInput.value="";
@@ -118,7 +118,7 @@ const confirmRemoveTask = async()=>{
     const response = await fetch(`https://dummyjson.com/todos/${id}`, {
         method: "DELETE",
       });
-   if(response.ok=true){
+   if(response.ok==true){
     localStorage.removeItem("toDos");
     localStorage.setItem("toDos",JSON.stringify(newTasks));
     showTasks();
