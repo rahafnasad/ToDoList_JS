@@ -59,6 +59,7 @@ const showTasks =()=>{
     });
 }
 // function to add new task 
+
 const addNewTask =async (e)=>{
 try{
     e.preventDefault();
@@ -88,7 +89,7 @@ const response = await fetch("https://dummyjson.com/todos/add", {
   });
 Tasks.push(newTask);
 
-if (response.ok==true){
+if (response.ok){
     validate.innerHTML="task added successfully ✅";
     validate.style.color="green";
     newTaskInput.value="";
@@ -118,7 +119,7 @@ const confirmRemoveTask = async()=>{
     const response = await fetch(`https://dummyjson.com/todos/${id}`, {
         method: "DELETE",
       });
-   if(response.ok==true){
+   if(response.ok){
     localStorage.removeItem("toDos");
     localStorage.setItem("toDos",JSON.stringify(newTasks));
     showTasks();
@@ -146,7 +147,7 @@ deleteModal.style.visibility="hidden";
 const updateStataus = async(id)=>{
 const tasks = getTasksFromLocalStorage();
 tasks.forEach((task)=>{
-if (task.id==id){
+if (task.id===id){
 task.completed=!(task.completed);
 
 }
@@ -262,6 +263,7 @@ const getTotal = ()=>{
 // function to call all function when needed
 const main = () =>
 {
+    getTasks();
     showTasks();
     getTotal();
 document.getElementById("taskForm").addEventListener("submit",addNewTask);
