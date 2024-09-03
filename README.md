@@ -24,9 +24,9 @@
   
 ## 📌 How to Use
 
-Clone the repository to your local machine.⭐️
-Open the index.html file in your web browser.⭐️
-Use the interface to add, edit, delete, or search for tasks.⭐️
+- Clone the repository to your local machine.⭐️
+- Open the index.html file in your web browser.⭐️
+- Use the interface to add, edit, delete, or search for tasks.⭐️
 
 ### 📌 Screenshots of the Todo list Website
 
