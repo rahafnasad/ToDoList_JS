@@ -2,8 +2,9 @@ const tableBody=document.querySelector(".tableTasks tbody ");
 const searchInput=document.getElementById("search");
 const EditForm=document.getElementById("editForm");
 const editInput = document.getElementById("inputEdit");
-        const inputIdEdit=document.getElementById("hiddenEditInput");
-        const loading = document.querySelector(".loading");
+const inputIdEdit=document.getElementById("hiddenEditInput");
+ const loading = document.querySelector(".loading");
+ let load=false;
 
 // function to get all tasks from API
 const  getTasks= async ()=>{
@@ -11,7 +12,7 @@ const  getTasks= async ()=>{
         const response = await fetch("https://dummyjson.com/todos");
 const {todos} = await response.json();
 localStorage.setItem("toDos",JSON.stringify(todos));
-
+showTasks();
 
     }
 catch (error){
@@ -263,8 +264,8 @@ const getTotal = ()=>{
 // function to call all function when needed
 const main = () =>
 {
+ 
     getTasks();
-    showTasks();
     getTotal();
 document.getElementById("taskForm").addEventListener("submit",addNewTask);
 searchInput.addEventListener("keyup",searchDescription)
