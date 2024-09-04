@@ -25,6 +25,10 @@
 ## 📌 How to Use
 
 - Clone the repository to your local machine.⭐️
+     ```bash
+    git clone https://github.com/rahafnasad/ToDoList_JS.git
+
+    ```
 - Open the index.html file in your web browser.⭐️
 - Use the interface to add, edit, delete, or search for tasks.⭐️
 
