@@ -95,9 +95,12 @@ if (response.ok){
     validate.style.color="green";
     newTaskInput.value="";
     setTimeout(()=>{validate.innerHTML=""},4000)
-    localStorage.removeItem("toDos");
+    localStorage.toDos=JSON.stringify(Tasks);
+   // localStorage.removeItem("toDos");
 localStorage.setItem("toDos",JSON.stringify(Tasks));
 showTasks();
+getTotal();
+
 
 }
 }
@@ -121,9 +124,11 @@ const confirmRemoveTask = async()=>{
         method: "DELETE",
       });
    if(response.ok){
-    localStorage.removeItem("toDos");
+   // localStorage.removeItem("toDos");
     localStorage.setItem("toDos",JSON.stringify(newTasks));
     showTasks();
+    getTotal();
+
     HideModal();
    }
  
@@ -154,9 +159,10 @@ task.completed=!(task.completed);
 }
 
 });
-localStorage.removeItem("toDos");
+//localStorage.removeItem("toDos");
 localStorage.setItem("toDos",JSON.stringify(tasks))
 showTasks();
+
 
 } 
 // CalC Total Task , Completed Tasks , Uncompleted Taskd
@@ -247,7 +253,7 @@ const getTotal = ()=>{
             }
         })
         
-        localStorage.removeItem("toDos");
+      //  localStorage.removeItem("toDos");
         localStorage.setItem("toDos",JSON.stringify(tasks));
         showTasks();
         HideModalEdit();
