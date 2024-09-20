@@ -13,6 +13,7 @@ const  getTasks= async ()=>{
 const {todos} = await response.json();
 localStorage.setItem("toDos",JSON.stringify(todos));
 showTasks();
+localStorage.setItem("ifNewOben","true");
 
     }
 catch (error){
@@ -58,6 +59,7 @@ const showTasks =()=>{
       countId++;
       tableBody.appendChild(newRow);
     });
+    getTotal()
 }
 // function to add new task 
 
@@ -95,8 +97,8 @@ if (response.ok){
     validate.style.color="green";
     newTaskInput.value="";
     setTimeout(()=>{validate.innerHTML=""},4000)
-    localStorage.toDos=JSON.stringify(Tasks);
-   // localStorage.removeItem("toDos");
+    //localStorage.toDos=JSON.stringify(Tasks);
+   localStorage.removeItem("toDos");
 localStorage.setItem("toDos",JSON.stringify(Tasks));
 showTasks();
 getTotal();
@@ -124,7 +126,7 @@ const confirmRemoveTask = async()=>{
         method: "DELETE",
       });
    if(response.ok){
-   // localStorage.removeItem("toDos");
+    localStorage.removeItem("toDos");
     localStorage.setItem("toDos",JSON.stringify(newTasks));
     showTasks();
     getTotal();
@@ -157,9 +159,11 @@ if (task.id===id){
 task.completed=!(task.completed);
 
 }
+getTotal();
+
 
 });
-//localStorage.removeItem("toDos");
+localStorage.removeItem("toDos");
 localStorage.setItem("toDos",JSON.stringify(tasks))
 showTasks();
 
@@ -174,14 +178,16 @@ const getTotal = ()=>{
 
     let completedCount=0;
     let unCompletedCount=0;
-    tasks.forEach((task)=>{
-        if(task.completed) {
-            completedCount++;
-        }
-        else {
-            unCompletedCount++;
-        }
-    })
+        tasks.forEach((task)=>{
+            if(task.completed) {
+                completedCount++;
+            }
+            else {
+                unCompletedCount++;
+            }
+        })
+  
+   
     if (tasks) {
         total.innerHTML=`Total Items : <span>${tasks.length}</span>`;}
 
@@ -253,7 +259,7 @@ const getTotal = ()=>{
             }
         })
         
-      //  localStorage.removeItem("toDos");
+        localStorage.removeItem("toDos");
         localStorage.setItem("toDos",JSON.stringify(tasks));
         showTasks();
         HideModalEdit();
@@ -265,14 +271,21 @@ const getTotal = ()=>{
         this.setTimeout(function(){
             loading.style.visibility ="hidden";
             document.body.style.overflow="auto";
-        },2000)
+        },0)
     })
 // function to call all function when needed
 const main = () =>
 {
- 
-    getTasks();
-    getTotal();
+    // In the first view, data is taken from API
+    if (!localStorage.getItem("ifNewOben")) {
+
+        getTasks();
+    }
+        // Other, data is taken from local storage
+
+    else {
+        showTasks()
+    }
 document.getElementById("taskForm").addEventListener("submit",addNewTask);
 searchInput.addEventListener("keyup",searchDescription)
 EditForm.addEventListener("submit",confirmEditTask);

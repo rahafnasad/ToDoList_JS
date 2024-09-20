@@ -27,6 +27,7 @@ body {
     font-style: normal;
     animation: typing 1s ease-in-out infinite alternate;
     animation-delay:0.7s ;
+    
 }
 
 @keyframes typing {
@@ -44,7 +45,7 @@ body {
 .addList input ,.searchList input {
     width: 50%;
     margin-right: 15px;
-    padding: 10px 0 ;
+    padding: 10px ;
     border-radius: 5px;
     border: 1px solid #b7b8b7;
 }
@@ -59,9 +60,7 @@ body {
 padding-left: 10px;
 color: #012a4a;
 }
-.addList input::placeholder , .searchList input::placeholder{
-    padding-left: 10px;
-}
+
 button{
     cursor: pointer;
 
@@ -84,7 +83,7 @@ font-weight: 500;
      margin-top: 20px;
 }
 .tableTasks {
-margin-top: 50px;
+margin-top: 20px;
 width: 100%;
 border-radius: 5px;
 border-collapse: collapse; 
@@ -183,7 +182,6 @@ text-decoration-color:     #5c5c5c;
     align-content: center;
     align-items: center;
     visibility: hidden;
-    
   }
   
   .modal .content{
@@ -192,11 +190,12 @@ text-decoration-color:     #5c5c5c;
     width: 40%;
     text-align: center;
     border-radius: 10px;
-    padding: 20px;
     box-shadow: 0 0 10px #333;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 10px;
+    padding: 15px;
   }
 
   .modal .content img{
@@ -220,12 +219,12 @@ font-size: 20px;
     display: flex;
     justify-content: center;
 }
-.summary .content{
+.summary {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 .summary{
-    margin-top: 50px;
+    margin-top: 20px;
     
 }
 #completedTasks span{
@@ -321,4 +320,10 @@ font-size: 20px;
   footer p {
     text-align: center;
     margin: 15px 0 ;
+  }
+  .summary ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
   }
