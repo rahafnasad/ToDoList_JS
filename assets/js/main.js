@@ -271,7 +271,7 @@ const getTotal = ()=>{
         this.setTimeout(function(){
             loading.style.visibility ="hidden";
             document.body.style.overflow="auto";
-        },0)
+        },2000)
     })
 // function to call all function when needed
 const main = () =>
