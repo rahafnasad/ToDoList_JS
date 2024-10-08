@@ -1,16 +1,13 @@
 /*1000*/
-@media (max-width:1000px){
-  
-    .summary ul{
-      
-    width: 95%;  
-}
+@media (max-width: 1000px) {
+  .summary ul {
+    width: 95%;
+  }
 }
 /*634*/
-@media (max-width:634px){
-  
-    .summary ul{
-        flex-direction: column;
-        align-items: center;  
-    }
+@media (max-width: 634px) {
+  .summary ul {
+    flex-direction: column;
+    align-items: center;
+  }
 }

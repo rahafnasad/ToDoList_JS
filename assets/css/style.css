@@ -1,329 +1,310 @@
-@import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=Playwrite+CU:wght@100..400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=Playwrite+CU:wght@100..400&family=Sora:wght@100..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Oswald:wght@200..700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Nerko+One&family=Playwrite+CU:wght@100..400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nerko+One&family=Playwrite+CU:wght@100..400&family=Sora:wght@100..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Oswald:wght@200..700&display=swap");
 
 body {
-    background-color: #ffffff;
-    color: #191919;
-    background-image: linear-gradient(rgba(227,227,227,.4) 1.5px,transparent 1.5px)
-    ,linear-gradient(to right,rgba(227,227,227,.4) 1.5px,transparent 1.5px);
-    background-size: 10px 10px;
-    background-color: #f3f3f3;
-    margin: 0;
-    overflow: hidden;
+  background-color: #ffffff;
+  color: #191919;
+  background-image: linear-gradient(
+      rgba(227, 227, 227, 0.4) 1.5px,
+      transparent 1.5px
+    ),
+    linear-gradient(to right, rgba(227, 227, 227, 0.4) 1.5px, transparent 1.5px);
+  background-size: 10px 10px;
+  background-color: #f3f3f3;
+  margin: 0;
+  overflow: hidden;
 }
-*{
-    font-family: "Sora", sans-serif;
-
+* {
+  font-family: "Sora", sans-serif;
 }
 .container {
-    margin: 25px;
+  margin: 25px;
 }
- h1 {
-    text-align: center;
-    font-family: "Playwrite CU", cursive;
-    font-size: 40px;
-    font-style: normal;
-    animation: typing 1s ease-in-out infinite alternate;
-    animation-delay:0.7s ;
-    
+h1 {
+  text-align: center;
+  font-family: "Playwrite CU", cursive;
+  font-size: 40px;
+  font-style: normal;
+  animation: typing 1s ease-in-out infinite alternate;
+  animation-delay: 0.7s;
 }
 
 @keyframes typing {
-    0% {
-        transform: translateX(-5px);
-            }
-        100% {
-            transform: translateX(5);
-            }
+  0% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(5);
+  }
 }
 .addList {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
-.addList input ,.searchList input {
-    width: 50%;
-    margin-right: 15px;
-    padding: 10px ;
-    border-radius: 5px;
-    border: 1px solid #b7b8b7;
+.addList input,
+.searchList input {
+  width: 50%;
+  margin-right: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #b7b8b7;
 }
-.searchList input{
-    width: 40%;
-
+.searchList input {
+  width: 40%;
 }
-.addList input:focus,.searchList input:focus{
-    outline: none;
+.addList input:focus,
+.searchList input:focus {
+  outline: none;
 
-    border: 1px solid #8e8f8e;
-padding-left: 10px;
-color: #012a4a;
+  border: 1px solid #8e8f8e;
+  padding-left: 10px;
+  color: #012a4a;
 }
 
-button{
-    cursor: pointer;
-
+button {
+  cursor: pointer;
 }
 .addList button {
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #191919;
-    color: #f5f5f5;
-    border: 1px solid #ced0ce;
-font-weight: 500;
-
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #191919;
+  color: #f5f5f5;
+  border: 1px solid #ced0ce;
+  font-weight: 500;
 }
-.addList button:hover{
-    background-color: #292929;
+.addList button:hover {
+  background-color: #292929;
 }
 .searchList {
-     display: flex;
-     justify-content: center;
-     margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 .tableTasks {
-margin-top: 20px;
-width: 100%;
-border-radius: 5px;
-border-collapse: collapse; 
-border: 1px solid #ced0ce;
-margin-bottom: 50px;
-
-
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 5px;
+  border-collapse: collapse;
+  border: 1px solid #ced0ce;
+  margin-bottom: 50px;
 }
-.tableTasks td{
-    text-align: center;
+.tableTasks td {
+  text-align: center;
 }
 
-.tableTasks thead{
-    background-color: #ced0ce;
-    height: 40px;
+.tableTasks thead {
+  background-color: #ced0ce;
+  height: 40px;
 }
-.tableTasks tbody tr{
-    height: 42px;
+.tableTasks tbody tr {
+  height: 42px;
 }
-.DoneButton{
-    margin: 5px 0;
-    background-color:#008000 ;
-color: white;
-padding: 8px 18px;
-border-radius: 10px;
-border: transparent;
-width: 80px;
-
+.DoneButton {
+  margin: 5px 0;
+  background-color: #008000;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 10px;
+  border: transparent;
+  width: 80px;
 }
-.DoneButton:hover{
-    background-color:#005c00 ;
-
+.DoneButton:hover {
+  background-color: #005c00;
 }
-.DeleteButton{
-    background-color:#df2935 ;
-    color: white;
-    padding: 8px 18px;
-    border-radius: 10px;
-    border: transparent;
-    width: 80px;
+.DeleteButton {
+  background-color: #df2935;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 10px;
+  border: transparent;
+  width: 80px;
 }
-.DeleteButton:hover{
-    background-color:#b3212b ;
-
+.DeleteButton:hover {
+  background-color: #b3212b;
 }
-.EditButton{
-    background-color:#550527 ;
-    color: white;
-    padding: 8px 18px;
-    border-radius: 10px;
-    border: transparent;
-    width: 80px;
-
+.EditButton {
+  background-color: #550527;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 10px;
+  border: transparent;
+  width: 80px;
 }
-.EditButton:hover{
-    background-color:#3d031b ;
-
+.EditButton:hover {
+  background-color: #3d031b;
 }
 
 .tableTasks tbody tr {
-    border-bottom: 1px solid #ced0ce;
-
+  border-bottom: 1px solid #ced0ce;
 }
 .IsCompleted {
-    color: #005c00;
-    font-weight: 500;
+  color: #005c00;
+  font-weight: 500;
 }
 .IsPending {
-    color: #df2935;
-    font-weight: 400;
-
+  color: #df2935;
+  font-weight: 400;
 }
 .tableTasks tbody tr[completed="true"] {
-    background-color: rgba(0, 247, 0, 0.1);
-   
+  background-color: rgba(0, 247, 0, 0.1);
 }
 
-.tableTasks tbody tr[completed="true"] .taskToDo{
-text-decoration: line-through;
-text-decoration-color:     #5c5c5c;
-
+.tableTasks tbody tr[completed="true"] .taskToDo {
+  text-decoration: line-through;
+  text-decoration-color: #5c5c5c;
 }
-#taskValidate{
-    text-align: center;
+#taskValidate {
+  text-align: center;
 }
 /* css for modal*/
 .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.55); /* خلفية شبة شفافة للجزء الخلفي */
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    visibility: hidden;
-  }
-  
-  .modal .content{
-    z-index: 10;
-    background-color: #f5f5f5;
-    width: 40%;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-    padding: 15px;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.55); /* خلفية شبة شفافة للجزء الخلفي */
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  visibility: hidden;
+}
 
-  .modal .content img{
-    height: 170px;
-    width: 170px;
-    border-radius: 50%;
+.modal .content {
+  z-index: 10;
+  background-color: #f5f5f5;
+  width: 40%;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  padding: 15px;
+}
 
-  }
-  .closeModal{
-    width: 100%;
-    display: flex;
-    justify-content: end;
-
-  }
-  .closeIcone{
-cursor: pointer;
-font-size: 20px;
-
-  }
-.oberationsAndSummary{
-    display: flex;
-    justify-content: center;
+.modal .content img {
+  height: 170px;
+  width: 170px;
+  border-radius: 50%;
+}
+.closeModal {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+.closeIcone {
+  cursor: pointer;
+  font-size: 20px;
+}
+.oberationsAndSummary {
+  display: flex;
+  justify-content: center;
 }
 .summary {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
-.summary{
-    margin-top: 20px;
-    
+.summary {
+  margin-top: 20px;
 }
-#completedTasks span{
-    margin-left: 10px;
+#completedTasks span {
+  margin-left: 10px;
 
-    border: 1px solid #006315;
-    padding: 5px 15px;
-    border-radius: 7px;
-   background-color: rgba(0, 247, 0, 0.1);
+  border: 1px solid #006315;
+  padding: 5px 15px;
+  border-radius: 7px;
+  background-color: rgba(0, 247, 0, 0.1);
 }
 #RemainingTasks span {
-    margin-left: 10px;
+  margin-left: 10px;
 
-    border: 1px solid #b41739;
-    padding: 5px 15px;
-    border-radius: 7px;
-    background-color: rgba(255, 0, 13, 0.1);  
+  border: 1px solid #b41739;
+  padding: 5px 15px;
+  border-radius: 7px;
+  background-color: rgba(255, 0, 13, 0.1);
 }
 #totalTasks span {
-    margin-left: 10px;
-    border: 1px solid #1272c0;
-    padding: 5px 15px;
-    border-radius: 7px;
-    background-color: rgba(2, 138, 156, 0.1); 
+  margin-left: 10px;
+  border: 1px solid #1272c0;
+  padding: 5px 15px;
+  border-radius: 7px;
+  background-color: rgba(2, 138, 156, 0.1);
 }
 .buttons {
-    width: 100%;
+  width: 100%;
 }
-#editButt{
-    width: 70%;
-    background-color: rgb(95, 21, 21);
-    padding: 15px 0;
-    font-size: 15px;
-
+#editButt {
+  width: 70%;
+  background-color: rgb(95, 21, 21);
+  padding: 15px 0;
+  font-size: 15px;
 }
 
 #modalEdit input {
-    width: 80%;
-    margin: 15px 0 ;
-    border-radius: 10px;
-    padding: 15px;
-    border: 1px solid rgb(95, 21, 21);
-    background-color: rgba(95, 21, 21, 0.1);
- 
+  width: 80%;
+  margin: 15px 0;
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid rgb(95, 21, 21);
+  background-color: rgba(95, 21, 21, 0.1);
 }
 
-#editForm{
-    width: 100%;
+#editForm {
+  width: 100%;
 }
 /* css loader*/
 .loading {
-    height: 100vh;
-    width: 100%;
-    position: fixed;
-    z-index: 3;
-    background-color: #333;
-    display: flex;
-    top: 0;
-    right: 0;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: white;
-    
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 3;
+  background-color: #333;
+  display: flex;
+  top: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
 }
-.loading p{
-    letter-spacing: 2px;
+.loading p {
+  letter-spacing: 2px;
 }
 .loader {
-    width: 48px;
-    height: 48px;
-    background: #fff;
-    border-radius: 50%;
-    position: relative;
-    animation: roll 1s ease-in-out infinite alternate;
+  width: 48px;
+  height: 48px;
+  background: #fff;
+  border-radius: 50%;
+  position: relative;
+  animation: roll 1s ease-in-out infinite alternate;
+}
+.loader:after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border-radius: 50%;
+  border: 5px solid;
+  border-color: red transparent;
+}
+@keyframes roll {
+  0% {
+    transform: translateX(-150%) rotate(0deg);
   }
-  .loader:after{
-    content:"";
-    position: absolute;
-    inset: 5px;
-    border-radius: 50%;
-    border: 5px solid ;
-    border-color: red transparent;
+  100% {
+    transform: translateX(150%) rotate(360deg);
   }
-  @keyframes roll {
-    0% {
-      transform: translateX(-150%) rotate(0deg) ;
-    }
-    100% {
-      transform:  translateX(150%) rotate(360deg);
-    }
-  }
-  footer p {
-    text-align: center;
-    margin: 15px 0 ;
-  }
-  .summary ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    width: 70%;
-  }
+}
+footer p {
+  text-align: center;
+  margin: 15px 0;
+}
+.summary ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
