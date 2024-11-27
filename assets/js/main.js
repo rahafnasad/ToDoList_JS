@@ -13,7 +13,7 @@ const getTasks = async () => {
         const { todos } = await response.json();
         localStorage.setItem("toDos", JSON.stringify(todos));
         showTasks();
-        localStorage.setItem("ifNewOben", "true");
+        localStorage.setItem(IS_INITIALIZED_LOCAL_STORAGE_KEY, "true");
 
     }
     catch (error) {
